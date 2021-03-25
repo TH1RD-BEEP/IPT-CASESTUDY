@@ -1,7 +1,7 @@
 public class Main {
 
   public static void main(String[] args) {
-    int number = 34;
+    int number = 36;
     boolean flag = false;
     for (int i = 2; i <= number / 2; ++i) {
 
