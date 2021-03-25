@@ -61,4 +61,43 @@ public class Main {
 
     return octalNumber;
   }
+  public static void main(String[] args) {
+    long num = 110110111;
+    int decimal = convertBinaryToDecimal(num);
+    System.out.println("Binary to Decimal");
+    System.out.println(num + " = " + decimal);
+  }
+
+  public static int convertBinaryToDecimal(long num) {
+    int decimalNumber = 0, i = 0;
+    long remainder;
+    
+    while (num != 0) {
+      remainder = num % 10;
+      num /= 10;
+      decimalNumber += remainder * Math.pow(2, i);
+      ++i;
+    }
+    
+    return decimalNumber;
+  }
+  public static void main(String[] args) {
+        int decimal = 78;
+        int octal = convertDecimalToOctal(decimal);
+        System.out.printf("%d in decimal = %d in octal", decimal, octal);
+    }
+
+    public static int convertDecimalToOctal(int decimal)
+    {
+        int octalNumber = 0, i = 1;
+
+        while (decimal != 0)
+        {
+            octalNumber += (decimal % 8) * i;
+            decimal /= 8;
+            i *= 10;
+        }
+
+        return octalNumber;
+    }
 }
